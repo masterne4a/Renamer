@@ -1,26 +1,26 @@
 import './style.css'
-/*import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'*/
+import './globals.css'
+import './normalize.css'
 import { rename } from './renamer.js'
 
-/*document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
+document.querySelector('#app').innerHTML = `
+<form class="mainForm">  
+    <label for="address">Введи адрес папки:</label>
+    <input class="address" name="address"></input>
+    <output role="status" class="avitoAddress" name="avitoAddress" id="avitoAddress" for="address"></output>
+</form>
 `
 
-setupCounter(document.querySelector('#counter'))*/
+const form = document.querySelector('.mainForm');
+const addressInput = document.querySelector('.address');
+const addressOutput = document.querySelector('.avitoAddress');
+
+addressInput.addEventListener('input', function(){
+const value = this.value
+addressOutput.textContent = rename(value)
+})
+
+
+
+
 console.log(rename('28.датчик-A6-C7-A8-D4Macan-Rear-DCM/1-1.jpg'))
