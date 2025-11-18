@@ -1,19 +1,43 @@
 #app {
   display: flex;
-
+  flex-direction: column;
 }
 
-.mainForm {
+#checboxForm {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  padding-block-start: 5vh;
+}
+
+#mainForm {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-self: center;
-  max-width: 50%;
+  width: 60%;
   height: 100%;
+  margin: auto;
+  padding-block-start: 5vh;
+}
+
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .avitoAddress {
-  width: 50%;
+  width: 100%;
+  height: 100%;
+  min-height: 50px;
   border: 1px solid green;
   background-color: rgba(255, 247, 0, 0.369);
+}
+
+.label-span {
+  user-select: none;
 }

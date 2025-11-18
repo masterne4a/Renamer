@@ -8,8 +8,6 @@
 
 body {
   margin: 0 auto;
-  font-family: var(--font-family);
-  font-size: var(--font-size);
   min-inline-size: 375px;
   max-inline-size: 1440px;
 }
